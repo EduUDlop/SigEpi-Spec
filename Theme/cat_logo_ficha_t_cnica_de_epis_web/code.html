@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600&amp;family=Open+Sans:wght@400;600&amp;family=Poppins:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"primary-fixed":"#bfe9ff","on-secondary-fixed-variant":"#00531b","primary-container":"#5dc2ed","surface-container-high":"#dce9ff","on-error":"#ffffff","on-tertiary-fixed":"#001c3a","secondary":"#006e26","secondary-container":"#3efc6e","on-tertiary-fixed-variant":"#234876","on-background":"#0b1c30","inverse-on-surface":"#eaf1ff","surface-container-lowest":"#ffffff","surface-tint":"#006685","surface-variant":"#d3e4fe","on-tertiary":"#ffffff","tertiary-fixed":"#d4e3ff","tertiary-fixed-dim":"#a6c8fe","secondary-fixed":"#6bff83","on-primary-fixed":"#001f2a","on-error-container":"#93000a","on-primary":"#ffffff","primary-fixed-dim":"#6fd2fe","inverse-primary":"#6fd2fe","surface-container-highest":"#d3e4fe","on-tertiary-container":"#244877","tertiary":"#3d608f","on-secondary-container":"#007128","surface-container":"#e5eeff","surface-dim":"#cbdbf5","surface-bright":"#f8f9ff","inverse-surface":"#213145","surface":"#f8f9ff","on-secondary-fixed":"#002106","on-primary-container":"#004e66","tertiary-container":"#96b8ed","error":"#ba1a1a","on-surface-variant":"#3e484e","on-surface":"#0b1c30","background":"#f8f9ff","primary":"#006685","on-secondary":"#ffffff","on-primary-fixed-variant":"#004d65","outline-variant":"#bec8cf","outline":"#6e797f","surface-container-low":"#eff4ff","error-container":"#ffdad6","secondary-fixed-dim":"#08e55a"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xl":"2rem","space-lg":"1.5rem","space-sm":"0.75rem","container-padding-mobile":"1rem","space-2xl":"3rem","space-xs":"0.5rem","space-md":"1rem","space-xxs":"0.25rem","gutter":"1rem","container-padding-desktop":"2rem"},fontFamily:{"headline-xl-mobile":["Poppins"],"headline-lg-mobile":["Poppins"],"label-md":["Open Sans"],"label-sm":["Open Sans"],"body-sm":["Open Sans"],"label-code":["Archivo Narrow"],"body-md":["Open Sans"],"headline-sm":["Poppins"],"headline-lg":["Poppins"],"headline-xl":["Poppins"],"label-numeric":["Archivo Narrow"],"headline-md":["Poppins"],"body-lg":["Open Sans"]},fontSize:{"headline-xl-mobile":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-lg-mobile":["22px",{lineHeight:"30px",fontWeight:"600"}],"label-md":["13px",{lineHeight:"16px",fontWeight:"600"}],"label-sm":["11px",{lineHeight:"14px",letterSpacing:"0.02em",fontWeight:"600"}],"body-sm":["12px",{lineHeight:"18px",fontWeight:"400"}],"label-code":["12px",{lineHeight:"16px",letterSpacing:"0.05em",fontWeight:"600"}],"body-md":["14px",{lineHeight:"20px",fontWeight:"400"}],"headline-sm":["16px",{lineHeight:"24px",fontWeight:"600"}],"headline-lg":["28px",{lineHeight:"36px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-xl":["36px",{lineHeight:"44px",letterSpacing:"-0.02em",fontWeight:"600"}],"label-numeric":["14px",{lineHeight:"18px",letterSpacing:"0.03em",fontWeight:"600"}],"headline-md":["20px",{lineHeight:"28px",fontWeight:"600"}],"body-lg":["16px",{lineHeight:"24px",fontWeight:"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex flex-col"><div class="h-16 px-space-md flex items-center justify-between"><div class="flex items-center gap-space-xs"><img alt="Brand logo. - Primary color: #5dc2ed - Font: publicSans - Mode: light - Roundness: rounded-md" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XrmsaByBx-z6VBN4Ij_-5bddlsSj36_zn37k5d25sQ6mKq1j2McOI9FBkoiqulPrIq2yXbaQiw27Y_Bo_EOo2x8AEvLUXFQx5UjoXhRhKoKWaJXW2x8IFWJIEjGCgjMlqw5q8nJ3ErvRTAzjHjc_e6TYwSZkM8nJYlPXnaeFgXV2olvTjFM-T-GDkp_VeEQ_qMu5YmX-jnIy3LdGZ2j5HLB6gmcJ2h5F8ixzgodEGRnRC7OMNN4qs61j4"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">SIGEPI</span><span class="font-label-sm text-label-sm text-outline leading-tight">NR-06 Compliance</span></div></div><span class="font-label-code text-label-code bg-surface-container-low text-primary px-space-xs py-space-xxs rounded">v2.4</span></div><div class="mx-space-md my-space-xs p-space-xs bg-surface-container-low rounded-lg flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-sm">sync</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface">MTE Base CA</span><span class="font-label-code text-label-code text-secondary">Sincronizado</span></div></div><span class="h-2 w-2 rounded-full bg-secondary-container animate-pulse"></span></div><nav class="flex flex-col gap-space-xxs px-space-sm pt-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-semibold rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-xs text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="dashboard" href="#"><span class="material-symbols-outlined text-xl">dashboard</span>Dashboard</a><a class="flex items-center gap-space-sm px-space-md py-space-xs text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="solicitacoes" href="#"><span class="material-symbols-outlined text-xl">assignment</span>Solicitações</a><a class="flex items-center gap-space-sm px-space-md py-space-xs text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="liberacoes-scanner" href="#"><span class="material-symbols-outlined text-xl">qr_code_scanner</span>Liberações / Scanner</a><a class="flex items-center gap-space-sm px-space-md py-space-xs text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="catalogo-estoque" href="#"><span class="material-symbols-outlined text-xl">inventory_2</span>Catálogo &amp; Estoque</a><a class="flex items-center gap-space-sm px-space-md py-space-xs text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="relatorios-nr06" href="#"><span class="material-symbols-outlined text-xl">verified_user</span>Relatórios NR-06</a><a class="flex items-center gap-space-sm px-space-md py-space-xs text-on-surface-variant font-label-md text-label-md rounded-lg hover:bg-surface-container-high hover:text-on-surface transition-all" data-path="configuracoes" href="#"><span class="material-symbols-outlined text-xl">settings</span>Configurações</a></nav></div><div class="p-space-md"><div class="p-space-sm bg-surface-container rounded-xl flex items-center justify-between"><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-primary text-lg">database</span><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface">Supabase Live</span><span class="font-label-code text-label-code text-on-surface-variant">cluster-br-01</span></div></div><span class="h-2 w-2 rounded-full bg-secondary"></span></div></div></aside><div class="pl-72 flex flex-col min-h-screen"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between"><div class="flex items-center gap-space-lg flex-1 max-w-xl"><div class="relative w-full max-w-md"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg pointer-events-none">search</span><input class="w-full h-10 pl-10 pr-space-md bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" placeholder="Buscar por Matrícula, CA ou Colaborador..." type="text"/></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xxs bg-surface-container-low rounded-lg"><span class="material-symbols-outlined text-primary text-base">schedule</span><span class="font-label-sm text-label-sm text-on-surface-variant">Turno Almoxarifado:</span><span class="font-label-code text-label-code text-primary">07:00 - 16:00 (A)</span></div></div><div class="flex items-center gap-space-md"><div class="hidden md:flex items-center gap-space-xs px-space-sm py-space-xxs bg-surface-container-low rounded-lg"><span class="material-symbols-outlined text-secondary text-base">cloud_done</span><span class="font-label-code text-label-code text-on-surface-variant">ONLINE</span></div><button class="relative p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-full transition-colors" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1 right-1 h-2.5 w-2.5 rounded-full bg-error ring-2 ring-surface-container-lowest"></span></button><div class="h-6 w-px bg-surface-container-high"></div><div class="flex items-center gap-space-sm"><div class="flex flex-col text-right hidden sm:flex"><span class="font-label-md text-label-md text-on-surface leading-tight">Carlos Eduardo</span><span class="font-label-sm text-label-sm text-on-surface-variant leading-none">Gestor de SST / Almoxarife</span></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container" src="https://lh3.googleusercontent.com/aida/AEtjO1WmTHI-cQ7_spxl5ha-kFknGU3v9tssZg5ynVTy_NmQTzyjN8H7fjt-sErUFplGKTwBxWumqPRh1fYv9WzFs9y4qkUBJrAEgVajC8BjVMX8l8KMS8doGQbOegWwceE5jOqzEEg1PDfGGYkcYXC6Tc1WiyAeHGw_MerMIJdaUF5oa11npnwna1VnKv5A4K2SY86G0p-hh6Sx6EOolXpFu_rPIT79evQEtb3TFQFw0qznMBdS7Vkts9--1iE"/></div></div></header><main class="w-full pt-16 bg-surface flex-1 px-space-lg py-space-lg"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-space-lg w-full">
+<!-- Top Action & Filter Toolbar -->
+<header class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="p-space-xs bg-primary/10 rounded-lg text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">inventory_2</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<h1 class="font-headline-md text-headline-md text-on-surface">Catálogo &amp; Inventário de EPIs</h1>
+<span class="font-label-code text-label-code px-space-xs py-0.5 rounded bg-surface-container-high text-primary font-semibold">148 ITENS ATIVOS</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Controle normativo NR-06, rastreabilidade serial e sincronismo governamental MTE.</p>
+</div>
+</div>
+<div class="flex flex-wrap items-center gap-space-xs sm:gap-space-sm">
+<button class="px-space-sm py-2 bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md flex items-center gap-space-xs transition-all" type="button">
+<span class="material-symbols-outlined text-lg text-primary">download</span>
+<span>Exportar Tabela</span>
+</button>
+<button class="px-space-sm py-2 bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md flex items-center gap-space-xs transition-all" type="button">
+<span class="material-symbols-outlined text-lg text-secondary">qr_code_2</span>
+<span>Etiquetas QR em Lote</span>
+</button>
+<button class="px-space-md py-2 bg-primary-container hover:brightness-95 text-on-primary-container font-headline-sm text-headline-sm rounded-lg flex items-center gap-space-xs shadow-sm transition-all active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-xl">add_circle</span>
+<span>Cadastrar Novo EPI</span>
+</button>
+</div>
+</div>
+<!-- Filters & Dynamic Full-text Search -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-sm items-center pt-space-xs">
+<div class="md:col-span-5 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg pointer-events-none">search</span>
+<input class="w-full h-11 pl-10 pr-10 bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all" placeholder="Buscar por nome técnico, número do CA, fabricante ou identificador..." type="text"/>
+<button class="absolute right-2.5 top-1/2 -translate-y-1/2 p-1 text-outline hover:text-on-surface transition-colors" title="Limpar busca" type="button">
+<span class="material-symbols-outlined text-base">tune</span>
+</button>
+</div>
+<div class="md:col-span-7 flex flex-wrap lg:flex-nowrap items-center gap-space-xs">
+<div class="flex-1 min-w-[140px]">
+<div class="relative">
+<select class="w-full h-11 px-space-sm bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container appearance-none cursor-pointer">
+<option value="">Todas as Categorias</option>
+<option value="cabeca">Cabeça &amp; Crânio</option>
+<option value="respiratorio">Proteção Respiratória</option>
+<option value="auditivo">Proteção Auditiva</option>
+<option value="visual">Proteção Visual / Facial</option>
+<option value="membros">Membros Superiores &amp; Inferiores</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-base">expand_more</span>
+</div>
+</div>
+<div class="flex-1 min-w-[130px]">
+<div class="relative">
+<select class="w-full h-11 px-space-sm bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container appearance-none cursor-pointer">
+<option value="">Status do Estoque</option>
+<option value="regular">Regular / Suficiente</option>
+<option value="critico">Estoque Baixo</option>
+<option value="vencendo">CA a Vencer</option>
+<option value="expirado">CA Expirado (Bloqueado)</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-base">expand_more</span>
+</div>
+</div>
+<div class="flex-1 min-w-[130px]">
+<div class="relative">
+<select class="w-full h-11 px-space-sm bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container appearance-none cursor-pointer">
+<option value="">Almoxarifado Principal</option>
+<option value="a">Setor Central A</option>
+<option value="b">Armazém Químico B</option>
+<option value="c">Subposto C</option>
+<option value="d">Oficina Técnica D</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-base">expand_more</span>
+</div>
+</div>
+<button class="h-11 px-3 bg-surface-container hover:bg-surface-container-high rounded-lg text-on-surface-variant flex items-center justify-center transition-all" title="Resetar filtros" type="button">
+<span class="material-symbols-outlined text-lg">filter_alt_off</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Master-Detail Double Panel Layout -->
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT DETAIL PANEL (1/3 Width on Desktop) -->
+<aside class="xl:col-span-4 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md sticky top-20">
+<!-- Detail Header & Badges -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-code text-label-code text-on-surface-variant uppercase tracking-wider">Ficha Técnica Individual</span>
+<div class="flex items-center gap-1.5 px-space-xs py-1 rounded bg-secondary/10 text-secondary">
+<span class="material-symbols-outlined text-sm">verified</span>
+<span class="font-label-code text-label-code font-bold">MTE BASE ATIVA</span>
+</div>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-surface leading-tight">
+              Capacete de Segurança com Aba Frontal e Jugular Classe B
+            </h2>
+<div class="flex items-center gap-space-xs flex-wrap">
+<span class="font-body-sm text-body-sm text-outline">Modelo: MSA V-Gard 500</span>
+<span class="text-outline">•</span>
+<span class="font-label-code text-label-code text-primary bg-primary-fixed/40 px-2 py-0.5 rounded font-semibold">REF: CAP-0941</span>
+</div>
+</div>
+<!-- Certificate & MTE Compliance Badge -->
+<div class="p-space-sm bg-surface-container-low rounded-lg flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-xl">workspace_premium</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-xs">
+<span class="font-label-numeric text-label-numeric font-bold text-on-surface">CA 31.428</span>
+<span class="px-1.5 py-0.2 rounded text-[10px] font-bold bg-secondary-container text-on-secondary-container uppercase">Aprovado</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Conforme Portaria MTE 672 / NR-06</span>
+</div>
+</div>
+<a class="p-2 text-primary hover:bg-surface-container rounded-lg transition-colors" href="#" title="Abrir espelho oficial MTE">
+<span class="material-symbols-outlined text-lg">open_in_new</span>
+</a>
+</div>
+<!-- Product Technical Visual Specs -->
+<div class="relative w-full h-44 rounded-lg overflow-hidden bg-surface-container flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="High-resolution industrial studio photograph of a white MSA V-Gard safety helmet with reflective striping and chin strap, resting on a clean slate architectural surface with cool technical lighting and cyan ambient rim lights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu7XsRIHFJUCQOuQ74VBMhDw-CtStfgk5ttan3YwnPYFoMTE--OBPeH-azdZmJr01AJs7Y5crIBvx40nAh-WnLFC03jtCBvVowZJirMpdePhluygJ_N5OeQb5RmCX3XYiA9Ism6pYw5tZfpOoiFMIlNPYd9H-6zzsCLlVjLHAm9mtfKXuP2RCrnHC-MIC5h8mLWycWQs8u0T7EBfN-k7XHGq-wL9JLCr41Hp5i7CJP9MF4JwCUB3za"/>
+<div class="absolute bottom-2 left-2 bg-surface-container-lowest/90 backdrop-blur-md px-2.5 py-1 rounded text-on-surface font-label-code text-label-code flex items-center gap-1.5">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span>Classe B - Dielétrico até 20.000V</span>
+</div>
+</div>
+<!-- Technical Attributes Grid -->
+<div class="grid grid-cols-2 gap-space-xs bg-surface-container-low p-space-sm rounded-lg">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Fabricante Titular</span>
+<span class="font-body-md text-body-md font-semibold text-on-surface">MSA do Brasil</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-outline">Lote Fabricação</span>
+<span class="font-label-numeric text-label-numeric text-on-surface">#MSA-23X-09</span>
+</div>
+<div class="flex flex-col pt-space-xs">
+<span class="font-label-sm text-label-sm text-outline">Validade do Lote</span>
+<span class="font-label-numeric text-label-numeric text-on-surface">18/11/2028</span>
+</div>
+<div class="flex flex-col pt-space-xs">
+<span class="font-label-sm text-label-sm text-outline">Tempo Restante</span>
+<span class="font-label-code text-label-code text-secondary font-bold">812 dias regulares</span>
+</div>
+</div>
+<!-- Inventory Status Counters -->
+<div class="flex flex-col gap-space-xs">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-semibold">Balanço Físico e Circulação</span>
+<div class="grid grid-cols-3 gap-space-xs">
+<div class="p-space-xs rounded-lg bg-surface-container text-center flex flex-col justify-center">
+<span class="font-headline-sm text-headline-sm text-primary">24</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Almoxarifado</span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container text-center flex flex-col justify-center">
+<span class="font-headline-sm text-headline-sm text-tertiary">58</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Em Uso</span>
+</div>
+<div class="p-space-xs rounded-lg bg-surface-container text-center flex flex-col justify-center">
+<span class="font-headline-sm text-headline-sm text-outline">10</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Ponto Mín.</span>
+</div>
+</div>
+</div>
+<!-- Physical Warehouse Locator Map Schema -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-outline">Endereçamento Físico</span>
+<span class="font-label-code text-label-code text-primary font-bold">SETOR A-02 // GAVETA 14</span>
+</div>
+<!-- Interactive visual shelf minimap -->
+<div class="grid grid-cols-6 gap-1 p-1 bg-surface-container-lowest rounded">
+<div class="h-4 bg-surface-container rounded-sm"></div>
+<div class="h-4 bg-surface-container rounded-sm"></div>
+<div class="h-4 bg-primary rounded-sm flex items-center justify-center">
+<div class="w-1.5 h-1.5 rounded-full bg-surface-container-lowest animate-ping"></div>
+</div>
+<div class="h-4 bg-surface-container rounded-sm"></div>
+<div class="h-4 bg-surface-container rounded-sm"></div>
+<div class="h-4 bg-surface-container rounded-sm"></div>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Prateleira Modular Industrial 03 - Almoxarifado Central</span>
+</div>
+<!-- Serial Tracking & QR Verification -->
+<div class="bg-surface-container-low p-space-sm rounded-lg flex items-center gap-space-sm">
+<!-- Inline SVG Industrial QR Stamp -->
+<div class="p-2 bg-surface-container-lowest rounded-lg shadow-sm flex items-center justify-center shrink-0">
+<svg class="w-14 h-14 text-on-surface" fill="currentColor" viewbox="0 0 24 24">
+<path d="M2 2h8v8H2V2zm2 2v4h4V4H4zm10-2h8v8h-8V2zm2 2v4h4V4h-4zM2 14h8v8H2v-8zm2 2v4h4v-4H4zm14-2h4v2h-4v-2zm-4 0h2v4h-2v-4zm2 4h4v4h-4v-4zm-4 2h2v2h-2v-2zm8-2h2v2h-2v-2zm-6-4h2v2h-2v-2zm6-6h-2v2h2V6zm-6 2h2v2h-2V8zm-2 4h2v2h-2v-2z"></path>
+</svg>
+</div>
+<div class="flex flex-col min-w-0 flex-1">
+<span class="font-label-sm text-label-sm text-outline">Identificador Serial Ativo</span>
+<span class="font-label-numeric text-label-numeric font-bold text-on-surface truncate">EPI-MSACAP-0941</span>
+<span class="font-label-code text-label-code text-secondary">HASH-SHA256: 8f4b...19c2</span>
+</div>
+</div>
+<!-- Primary Actions for Selected Item -->
+<div class="flex flex-col gap-space-xs pt-space-xs">
+<button class="w-full py-2.5 bg-primary hover:bg-primary/90 text-on-primary rounded-lg font-headline-sm text-headline-sm flex items-center justify-center gap-space-xs shadow-sm transition-all active:scale-[0.99]" type="button">
+<span class="material-symbols-outlined text-lg">print</span>
+<span>Imprimir Etiqueta Térmica QR</span>
+</button>
+<div class="grid grid-cols-2 gap-space-xs">
+<button class="py-2 px-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 transition-all" type="button">
+<span class="material-symbols-outlined text-base text-outline">swap_horiz</span>
+<span>Baixa / Troca</span>
+</button>
+<button class="py-2 px-space-xs bg-surface-container hover:bg-surface-container-high text-on-surface rounded-lg font-label-md text-label-md flex items-center justify-center gap-1 transition-all" type="button">
+<span class="material-symbols-outlined text-base text-tertiary">history</span>
+<span>Histórico Colab.</span>
+</button>
+</div>
+</div>
+</div>
+</aside>
+<!-- RIGHT MASTER INVENTORY DATA TABLE (2/3 Width on Desktop) -->
+<section class="xl:col-span-8 flex flex-col gap-space-md">
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<!-- Table Subheader -->
+<div class="px-space-md py-space-sm bg-surface-container-lowest flex items-center justify-between border-b border-surface-container-high">
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-on-surface">Equipamentos Registrados</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-code text-label-code text-on-surface-variant font-bold">148 totais</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-body-sm text-body-sm text-outline hidden md:inline">Ordenado por: <strong>Validade CA (Asc)</strong></span>
+<div class="flex items-center gap-1">
+<button class="p-1.5 text-outline hover:text-on-surface rounded hover:bg-surface-container transition-colors" title="Densidade de visualização" type="button">
+<span class="material-symbols-outlined text-lg">density_medium</span>
+</button>
+<button class="p-1.5 text-outline hover:text-on-surface rounded hover:bg-surface-container transition-colors" title="Gerenciar colunas" type="button">
+<span class="material-symbols-outlined text-lg">view_column</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Responsive Data Table -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-code text-label-code uppercase tracking-wider">
+<th class="py-3 px-space-md w-12 text-center" scope="col">Item</th>
+<th class="py-3 px-space-sm" scope="col">Equipamento / Modelo</th>
+<th class="py-3 px-space-sm" scope="col">Categoria</th>
+<th class="py-3 px-space-sm" scope="col">CA &amp; MTE</th>
+<th class="py-3 px-space-sm text-center" scope="col">Saldo</th>
+<th class="py-3 px-space-sm text-center" scope="col">Em Uso</th>
+<th class="py-3 px-space-sm" scope="col">Almoxarifado</th>
+<th class="py-3 px-space-sm" scope="col">Validade</th>
+<th class="py-3 px-space-md text-right" scope="col">Ações</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1: Capacete MSA V-Gard (Selected State) -->
+<tr class="bg-primary-fixed/20 hover:bg-primary-fixed/30 transition-colors cursor-pointer">
+<td class="py-3 px-space-md text-center">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest overflow-hidden flex items-center justify-center p-0.5 shadow-sm">
+<img class="w-full h-full object-contain" data-alt="Technical product render of an MSA white industrial hard hat with chin strap isolated on neutral light background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCUH079CuuPQAgGaN05zOgqU4H0jQnuVCWNiOtCLrI2upbh-5NUnpWeTzKmG-jvLTA5jORraXaE3RvN90DLcFUo1hn9cpy91-XA8Gxfl7tt9aFuZJznfuzHELA6ixCVBDwSZo20HzCcIknvt3KGSBWbbZAylc_d5LtYyfUnktFVWeEkipefkdy2ESbonrvF2D0BgzjZ7ZeiABxztEDom4oXhNpZv8UxsW9JnReGWkPepfHXbUSGRmG"/>
+</div>
+</td>
+<td class="py-3 px-space-sm min-w-[180px]">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface flex items-center gap-1">
+                        Capacete V-Gard 500
+                        <span class="w-2 h-2 rounded-full bg-primary" title="Item em Foco"></span>
+</span>
+<span class="font-body-sm text-body-sm text-outline">MSA do Brasil • Aba Frontal</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface font-semibold">Cabeça</span>
+</td>
+<td class="py-3 px-space-sm min-w-[120px]">
+<div class="flex flex-col">
+<span class="font-label-numeric text-label-numeric font-bold text-on-surface">CA 31.428</span>
+<span class="font-label-code text-label-code text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">check_circle</span> Regular
+                      </span>
+</div>
+</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">24 un</span>
+</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">58 un</span>
+</td>
+<td class="py-3 px-space-sm">
+<span class="font-label-code text-label-code text-on-surface bg-surface-container px-1.5 py-0.5 rounded">Setor A-02</span>
+</td>
+<td class="py-3 px-space-sm">
+<span class="font-label-numeric text-label-numeric text-on-surface">18/11/2028</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 text-primary hover:bg-surface-container rounded transition-colors" title="Visualizar ficha técnica" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 text-outline hover:text-on-surface rounded transition-colors" title="Editar" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 text-secondary hover:bg-surface-container rounded transition-colors" title="Gerar QR rápido" type="button">
+<span class="material-symbols-outlined text-lg">qr_code_2</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Óculos de Proteção Danny -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-3 px-space-md text-center">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low overflow-hidden flex items-center justify-center p-0.5">
+<img class="w-full h-full object-contain" data-alt="Technical product shot of clear anti-fog safety goggles with adjustable blue elastic headband on neutral studio setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkcYDizCbAuxQE_QL9pfi2EtWcqLZ1hO98jAqxy04_YywMs7gjXprAJZNCC9al8eOfQ5MdE_5aXq_olmzd13-VXiP5VNpX4mR7DsUfBCy-ISPGq2UuJUXKnHh7HSOuXZXogSZ_Dh_W62mFQvEaqjeToGvMaYgE7Qr788tY9KH0KY6c0wJljJdN0GaQBEx06DOHF2vgGkUXVowHRKaooMABqSK3Q_BK6tG18Bsj0ZMP1yw3VHBmETrm"/>
+</div>
+</td>
+<td class="py-3 px-space-sm min-w-[180px]">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Óculos Ampla Visão</span>
+<span class="font-body-sm text-body-sm text-outline">Danny • Anti-embaçante</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface font-semibold">Visual</span>
+</td>
+<td class="py-3 px-space-sm min-w-[120px]">
+<div class="flex flex-col">
+<span class="font-label-numeric text-label-numeric font-bold text-on-surface">CA 14.998</span>
+<span class="font-label-code text-label-code text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">check_circle</span> Regular
+                      </span>
+</div>
+</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">86 un</span>
+</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">112 un</span>
+</td>
+<td class="py-3 px-space-sm">
+<span class="font-label-code text-label-code text-on-surface bg-surface-container px-1.5 py-0.5 rounded">Armazém B-01</span>
+</td>
+<td class="py-3 px-space-sm">
+<span class="font-label-numeric text-label-numeric text-on-surface">04/09/2027</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 text-outline hover:text-primary rounded transition-colors" title="Visualizar" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 text-outline hover:text-on-surface rounded transition-colors" title="Editar" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 text-secondary hover:bg-surface-container rounded transition-colors" title="Gerar QR rápido" type="button">
+<span class="material-symbols-outlined text-lg">qr_code_2</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Luva Química Ansell (Warning: Expiring soon) -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer bg-error-container/10">
+<td class="py-3 px-space-md text-center">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low overflow-hidden flex items-center justify-center p-0.5">
+<img class="w-full h-full object-contain" data-alt="Industrial green nitril chemical resistance gloves isolated against clean neutral backdrop with subtle reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANvZMEh1Vy5tKiKd1psepyavy-gQA5jILnP8SBqo8_0ULOAb33hv2wBBIhwwh76_1HWPPKoyO7GcnI3awNKYLVDJAIu6wezSMvh07iNCkQ7_lWhf8a91xdO_QCeCNk84hsaIn8_rogOFiD4oYePC3QiPEHhm17evgb0mVxAJAFgSMrStElpY8AZ0a1yH8X6UHeVSJj8j4gyhQBPCggs2464UfOpAGufh2FcD4Ci07rjdMI3TDz4UmL"/>
+</div>
+</td>
+<td class="py-3 px-space-sm min-w-[180px]">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Luva Proteção Química</span>
+<span class="font-body-sm text-body-sm text-outline">Ansell Sol-Vex 37-175</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface font-semibold">Membros</span>
+</td>
+<td class="py-3 px-space-sm min-w-[120px]">
+<div class="flex flex-col">
+<span class="font-label-numeric text-label-numeric font-bold text-on-surface">CA 25.140</span>
+<span class="font-label-code text-label-code text-error flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">warning</span> Vence em 45d
+                      </span>
+</div>
+</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-headline-sm text-headline-sm text-error font-bold">14 un</span>
+</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">40 un</span>
+</td>
+<td class="py-3 px-space-sm">
+<span class="font-label-code text-label-code text-on-surface bg-surface-container px-1.5 py-0.5 rounded">Armazém C-04</span>
+</td>
+<td class="py-3 px-space-sm">
+<span class="font-label-numeric text-label-numeric font-bold text-error">12/06/2024</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 text-outline hover:text-primary rounded transition-colors" title="Visualizar" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 text-outline hover:text-on-surface rounded transition-colors" title="Editar" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 text-secondary hover:bg-surface-container rounded transition-colors" title="Gerar QR rápido" type="button">
+<span class="material-symbols-outlined text-lg">qr_code_2</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Botina de Couro Marluvas -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-3 px-space-md text-center">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low overflow-hidden flex items-center justify-center p-0.5">
+<img class="w-full h-full object-contain" data-alt="Heavy-duty black leather safety boots with composite toe protection and shock-absorber sole presented on smooth gray background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmXlkKRkxDCeJZSnxIMaQN4S0HImdZTUatAdqixeYsVoQ3-RdJfeQ0cQhWmduVXB4TY17twvQmkPmczPdO6uTrEn-gnwWE5-nsfJ0dcwcGGmsABjF15kZMIdTzEPKXhsOVdsEZOS4xkTxD643jN4AujyWjgLfevvzl55ymFDGJGe6h3s8DRmofD7PfYoeWyM_-0FvqxYtCevh9697MgJIPz7-6RWXn6NzUCkqIRGw0wCwGTfg894oc"/>
+</div>
+</td>
+<td class="py-3 px-space-sm min-w-[180px]">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Botina Couro Composite</span>
+<span class="font-body-sm text-body-sm text-outline">Marluvas 75BHP500</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface font-semibold">Membros</span>
+</td>
+<td class="py-3 px-space-sm min-w-[120px]">
+<div class="flex flex-col">
+<span class="font-label-numeric text-label-numeric font-bold text-on-surface">CA 41.337</span>
+<span class="font-label-code text-label-code text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">check_circle</span> Regular
+                      </span>
+</div>
+</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">42 par</span>
+</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">96 par</span>
+</td>
+<td class="py-3 px-space-sm">
+<span class="font-label-code text-label-code text-on-surface bg-surface-container px-1.5 py-0.5 rounded">Armazém D-02</span>
+</td>
+<td class="py-3 px-space-sm">
+<span class="font-label-numeric text-label-numeric text-on-surface">23/10/2026</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 text-outline hover:text-primary rounded transition-colors" title="Visualizar" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 text-outline hover:text-on-surface rounded transition-colors" title="Editar" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 text-secondary hover:bg-surface-container rounded transition-colors" title="Gerar QR rápido" type="button">
+<span class="material-symbols-outlined text-lg">qr_code_2</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 5: Protetor Auditivo 3M (Expired CA / Blocked) -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer opacity-75">
+<td class="py-3 px-space-md text-center">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low overflow-hidden flex items-center justify-center p-0.5">
+<img class="w-full h-full object-contain" data-alt="Industrial reusable silicone earplugs with cord on clean technical surface with neutral studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4gUrRStKpqtpPMrogQSU23HWQW9T_M_p8r70zQadfZXvKjoefvaOeHZcDmdST0aPNWeL4IDvcxDy2tAuT9MQ8O6PnqirC5rhjdAhqk1mo-Fje8oCJPj5Hyqm8Z5mXSCtrxVCIbbdCxoplw2QME_9KEKJ2WBCCnqRPVqSgPmIqsv_P7POOc3aaAsBSLii1sYgXR4aOsZKHLtvFyZvX8D7afXsXtnN_aJeLR28p7A5_VFn0BVLDcbJX"/>
+</div>
+</td>
+<td class="py-3 px-space-sm min-w-[180px]">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface line-through text-outline">Protetor Silicone 3M</span>
+<span class="font-body-sm text-body-sm text-error">Distribuição Bloqueada</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface font-semibold">Auditivo</span>
+</td>
+<td class="py-3 px-space-sm min-w-[120px]">
+<div class="flex flex-col">
+<span class="font-label-numeric text-label-numeric font-bold text-outline">CA 05.674</span>
+<span class="font-label-code text-label-code text-error flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">block</span> Expirado MTE
+                      </span>
+</div>
+</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-headline-sm text-headline-sm text-outline font-bold">0 un</span>
+</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-label-numeric text-label-numeric text-outline">0 un</span>
+</td>
+<td class="py-3 px-space-sm">
+<span class="font-label-code text-label-code text-outline bg-surface-container px-1.5 py-0.5 rounded">Quarentena</span>
+</td>
+<td class="py-3 px-space-sm">
+<span class="font-label-numeric text-label-numeric text-error font-bold">15/01/2024</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 text-outline hover:text-primary rounded transition-colors" title="Visualizar" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 text-outline hover:text-on-surface rounded transition-colors" title="Substituir CA" type="button">
+<span class="material-symbols-outlined text-lg">sync_problem</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 6: Máscara PFF2 N95 Camper -->
+<tr class="hover:bg-surface-container-low transition-colors cursor-pointer">
+<td class="py-3 px-space-md text-center">
+<div class="w-10 h-10 rounded-lg bg-surface-container-low overflow-hidden flex items-center justify-center p-0.5">
+<img class="w-full h-full object-contain" data-alt="Professional PFF2 N95 valved respirator mask in clean white industrial background with cyan subtle highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxzVO0LX21TRaUb0ZHeFj8f5Zwts7ojg3K8UdVlZuct3rYjuKSXnRR6UkQNIey8nAWP-ns-f2SpP8hbI0zlOIByk0uT3BnPHWl4DtapNWHZ_ZU4HcukSRMmJqpYgJcrXv44GKErQLNYl9VMm03BB3KPJXUqYhWM5ej9I7-ho2p7nQq3n8hJ6Vc-OTcgU2ySCF7FQjUivEDoXVuYKrEEjf1Z4R0uJaFD2EJhl7B-54wRSkq4AGfp8DA"/>
+</div>
+</td>
+<td class="py-3 px-space-sm min-w-[180px]">
+<div class="flex flex-col">
+<span class="font-body-md text-body-md font-semibold text-on-surface">Máscara PFF2 c/ Válvula</span>
+<span class="font-body-sm text-body-sm text-outline">Camper • N95 Regulamentada</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded bg-surface-container text-on-surface font-semibold">Respiratório</span>
+</td>
+<td class="py-3 px-space-sm min-w-[120px]">
+<div class="flex flex-col">
+<span class="font-label-numeric text-label-numeric font-bold text-on-surface">CA 38.504</span>
+<span class="font-label-code text-label-code text-secondary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-xs">check_circle</span> Regular
+                      </span>
+</div>
+</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">120 un</span>
+</td>
+<td class="py-3 px-space-sm text-center">
+<span class="font-label-numeric text-label-numeric text-on-surface-variant">250 un</span>
+</td>
+<td class="py-3 px-space-sm">
+<span class="font-label-code text-label-code text-on-surface bg-surface-container px-1.5 py-0.5 rounded">Armazém A-05</span>
+</td>
+<td class="py-3 px-space-sm">
+<span class="font-label-numeric text-label-numeric text-on-surface">30/08/2028</span>
+</td>
+<td class="py-3 px-space-md text-right">
+<div class="flex items-center justify-end gap-1">
+<button class="p-1.5 text-outline hover:text-primary rounded transition-colors" title="Visualizar" type="button">
+<span class="material-symbols-outlined text-lg">visibility</span>
+</button>
+<button class="p-1.5 text-outline hover:text-on-surface rounded transition-colors" title="Editar" type="button">
+<span class="material-symbols-outlined text-lg">edit</span>
+</button>
+<button class="p-1.5 text-secondary hover:bg-surface-container rounded transition-colors" title="Gerar QR rápido" type="button">
+<span class="material-symbols-outlined text-lg">qr_code_2</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination Toolbar -->
+<footer class="p-space-md bg-surface-container-lowest flex flex-col sm:flex-row items-center justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm text-on-surface-variant font-body-sm text-body-sm">
+<span>Mostrando <strong>1-6</strong> de <strong>148</strong> equipamentos normatizados</span>
+<div class="h-4 w-px bg-surface-container-high hidden sm:block"></div>
+<div class="flex items-center gap-1.5">
+<span class="hidden sm:inline">Exibir:</span>
+<select class="bg-surface-container-low rounded px-2 py-1 text-on-surface font-label-code text-label-code focus:outline-none">
+<option value="6">6 por página</option>
+<option selected="" value="20">20 por página</option>
+<option value="50">50 por página</option>
+<option value="100">100 por página</option>
+</select>
+</div>
+</div>
+<nav aria-label="Navegação de páginas" class="flex items-center gap-1">
+<button class="p-2 text-outline hover:text-on-surface hover:bg-surface-container rounded-lg disabled:opacity-30 disabled:pointer-events-none transition-colors" disabled="" type="button">
+<span class="material-symbols-outlined text-lg">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-lg bg-primary text-on-primary font-label-code text-label-code font-bold" type="button">1</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface font-label-code text-label-code transition-colors" type="button">2</button>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface font-label-code text-label-code transition-colors" type="button">3</button>
+<span class="text-outline px-1">...</span>
+<button class="w-8 h-8 rounded-lg hover:bg-surface-container text-on-surface font-label-code text-label-code transition-colors" type="button">8</button>
+<button class="p-2 text-on-surface hover:bg-surface-container rounded-lg transition-colors" type="button">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</nav>
+</footer>
+</div>
+</section>
+</div>
+</div>
+</div></main></div></body></html>
