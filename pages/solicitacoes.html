@@ -1,0 +1,59 @@
+<!-- pages/solicitacoes.html -->
+<div class="flex flex-col w-full gap-space-lg pb-space-2xl">
+  <header class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-sm">
+    <div class="flex flex-col">
+      <div class="flex items-center gap-space-xs text-primary mb-space-xxs">
+        <span class="material-symbols-outlined text-[18px]">verified_user</span>
+        <span class="font-label-code text-label-code tracking-wider uppercase text-on-surface-variant">NR-06 • Expedição Ágil</span>
+      </div>
+      <h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Nova Solicitação de EPI</h1>
+      <p class="font-body-md text-body-md text-on-surface-variant">Emissão rápida com checagem automática de CA e estoque disponível</p>
+    </div>
+  </header>
+
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+    <div class="lg:col-span-7 flex flex-col gap-space-md">
+      <form class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-lg" onsubmit="event.preventDefault(); window.sigepiApp.handleSolicitacao();">
+        <section class="flex flex-col gap-space-xs">
+          <label class="font-headline-sm text-headline-sm text-on-surface">Colaborador Solicitante</label>
+          <input class="w-full px-4 py-2 rounded-lg bg-surface-container-low text-on-surface font-body-md text-body-md" type="text" value="Carlos Eduardo Silva — Matrícula: 10482 — Eletricista"/>
+        </section>
+
+        <section class="flex flex-col gap-space-xs">
+          <label class="font-headline-sm text-headline-sm text-on-surface">Equipamento Desejado</label>
+          <div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between">
+            <div class="flex items-center gap-space-sm">
+              <span class="material-symbols-outlined text-[24px] text-primary">visibility</span>
+              <span class="font-headline-sm text-headline-sm text-on-surface">Óculos de Proteção Ampla Visão (CA 41.289)</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="flex flex-col gap-space-md pt-space-xs">
+          <label class="flex items-start gap-space-sm cursor-pointer">
+            <input checked class="mt-1 w-4 h-4 text-primary bg-surface-container-low" type="checkbox"/>
+            <span class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+              Declaro que receberei o EPI para uso exclusivo em minhas funções operacionais, responsabilizando-me pela guarda e conservação conforme a <strong>NR-06</strong>.
+            </span>
+          </label>
+          <button class="w-full flex items-center justify-center gap-space-xs px-space-xl py-space-sm rounded-lg font-headline-sm text-headline-sm bg-primary text-on-primary shadow-sm hover:brightness-95 transition-all" type="submit">
+            <span class="material-symbols-outlined text-[20px]">send_and_archive</span>
+            <span>Confirmar Solicitação de EPI</span>
+          </button>
+        </section>
+      </form>
+    </div>
+
+    <div class="lg:col-span-5 flex flex-col gap-space-md">
+      <div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm flex flex-col gap-space-md">
+        <span class="font-label-code text-label-code uppercase tracking-wider text-on-surface">Requisição Ativa</span>
+        <div class="bg-surface-container-low rounded-xl p-space-md flex items-center justify-between">
+          <div class="flex flex-col">
+            <span class="font-label-sm text-label-sm text-on-surface-variant">Código de Balcão</span>
+            <span class="font-label-numeric text-[32px] font-bold text-primary">RET-8942</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

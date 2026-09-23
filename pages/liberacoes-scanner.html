@@ -1,0 +1,52 @@
+<!-- pages/liberacoes-scanner.html -->
+<div class="flex flex-col w-full gap-space-md">
+  <header class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md p-space-md rounded-xl bg-surface-container-lowest shadow-sm">
+    <div class="flex flex-col">
+      <div class="flex items-center gap-space-xs">
+        <span class="w-2.5 h-2.5 rounded-full bg-secondary-container animate-pulse"></span>
+        <h1 class="font-headline-md text-headline-md text-on-surface tracking-tight">Liberação &amp; Scanner no Balcão</h1>
+      </div>
+      <p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">Posto 02 — Almoxarifado Central • Operador: <span class="text-on-surface font-semibold">Carlos Eduardo</span></p>
+    </div>
+  </header>
+
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
+    <div class="lg:col-span-5 flex flex-col gap-space-md">
+      <div class="relative overflow-hidden rounded-xl bg-inverse-surface text-inverse-on-surface p-space-md shadow-md">
+        <div class="flex items-center justify-between mb-space-sm">
+          <div class="flex items-center gap-space-xs">
+            <span class="material-symbols-outlined text-primary-container text-[20px]">qr_code_scanner</span>
+            <span class="font-headline-sm text-headline-sm text-inverse-on-surface">Visor Óptico</span>
+          </div>
+          <span class="px-2 py-0.5 rounded-full bg-secondary/30 text-secondary-fixed text-label-code">Leitura Ativa</span>
+        </div>
+        <form class="mt-space-sm flex items-center gap-space-xs" onsubmit="event.preventDefault(); window.sigepiApp.handleQuickScan();">
+          <input class="w-full pl-3 pr-3 py-2 rounded-lg bg-inverse-surface text-inverse-on-surface border border-outline placeholder:text-outline text-body-sm" id="inputDirectCode" placeholder="Insira Matrícula, RET ou CA..." type="text" value="RET-8942"/>
+          <button class="px-space-md py-2 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md" type="submit">Validar</button>
+        </form>
+      </div>
+
+      <div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-md">
+        <h2 class="font-headline-sm text-headline-sm text-on-surface">Luva Isolante 10kV Classe 2</h2>
+        <button class="w-full py-3 px-space-md rounded-lg bg-secondary-container text-on-surface font-headline-sm text-headline-sm shadow-md" type="button" @click="$store.notificacao.showToast('Baixa de estoque confirmada com sucesso!', 'success')">
+          Confirmar e Baixar Estoque
+        </button>
+      </div>
+    </div>
+
+    <div class="lg:col-span-7 flex flex-col gap-space-md">
+      <div class="rounded-xl bg-surface-container-lowest p-space-md shadow-sm flex flex-col gap-space-md">
+        <h3 class="font-headline-sm text-headline-sm text-on-surface">Fila de Atendimento do Balcão</h3>
+        <div class="flex flex-col gap-space-xs">
+          <div class="p-space-md rounded-xl bg-surface-container-high/60 flex items-center justify-between">
+            <div>
+              <h4 class="font-headline-sm text-headline-sm text-on-surface">Carlos Eduardo Silva</h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">Luva Isolante 10kV • RET-8942</p>
+            </div>
+            <button class="px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md" type="button" @click="$store.notificacao.showToast('Chamando colaborador...', 'info')">Chamar / Liberar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

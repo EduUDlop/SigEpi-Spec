@@ -1,0 +1,50 @@
+<!-- pages/relatorios.html -->
+<div class="flex flex-col w-full gap-space-lg">
+  <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+    <div class="flex flex-col gap-space-xxs min-w-0">
+      <div class="flex items-center gap-space-xs">
+        <span class="font-label-code text-label-code uppercase tracking-wider text-primary bg-primary-fixed/40 px-space-xs py-0.5 rounded">Módulo Compliance</span>
+        <span class="text-outline-variant font-label-code text-label-code">•</span>
+        <span class="flex items-center gap-1 font-label-code text-label-code text-secondary font-semibold">
+          <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Auditoria NR-06
+        </span>
+      </div>
+      <h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Relatórios &amp; Conformidade Normativa</h1>
+      <p class="font-body-sm text-body-sm text-on-surface-variant">Emitir relatórios para fiscalização do Ministério do Trabalho, posição de estoque e histórico de movimentações</p>
+    </div>
+    <div class="flex items-center gap-space-xs flex-wrap">
+      <button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm hover:brightness-95 transition-all" type="button" @click="$store.notificacao.showToast('Gerando Relatório Consolidado em PDF...', 'info')">
+        <span class="material-symbols-outlined text-[18px]">picture_as_pdf</span>
+        <span>Gerar Relatório PDF Geral</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+    <div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+      <div class="flex items-center gap-space-sm mb-space-sm">
+        <div class="w-10 h-10 rounded-lg bg-primary-container/20 text-primary flex items-center justify-center">
+          <span class="material-symbols-outlined text-2xl">verified</span>
+        </div>
+        <div>
+          <h2 class="font-headline-sm text-headline-sm text-on-surface">Ficha de Entrega NR-06</h2>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Histórico assinado de EPIs entregues por colaborador</p>
+        </div>
+      </div>
+      <button class="w-full h-10 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg transition-all" type="button" @click="$store.notificacao.showToast('Relatório de Ficha NR-06 baixado!', 'success')">Emitir Ficha de Colaborador</button>
+    </div>
+
+    <div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col justify-between">
+      <div class="flex items-center gap-space-sm mb-space-sm">
+        <div class="w-10 h-10 rounded-lg bg-tertiary-container/20 text-tertiary flex items-center justify-center">
+          <span class="material-symbols-outlined text-2xl">history_toggle_off</span>
+        </div>
+        <div>
+          <h2 class="font-headline-sm text-headline-sm text-on-surface">Relatório de Validades &amp; CAs</h2>
+          <p class="font-body-sm text-body-sm text-on-surface-variant">Mapeamento de itens vencidos ou com vencimento em até 30 dias</p>
+        </div>
+      </div>
+      <button class="w-full h-10 bg-surface-container hover:bg-surface-container-high text-on-surface font-label-md text-label-md rounded-lg transition-all" type="button" @click="$store.notificacao.showToast('Relatório de Validades gerado!', 'success')">Exportar Posição de CAs</button>
+    </div>
+  </div>
+</div>
