@@ -1,0 +1,31 @@
+<!-- pages/login.html -->
+<div class="w-full max-w-md bg-surface-container-lowest p-space-xl rounded-xl shadow-md border border-surface-container-high flex flex-col gap-space-lg">
+  <div class="flex flex-col items-center gap-space-xs text-center">
+    <img alt="SIGEPI Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XrmsaByBx-z6VBN4Ij_-5bddlsSj36_zn37k5d25sQ6mKq1j2McOI9FBkoiqulPrIq2yXbaQiw27Y_Bo_EOo2x8AEvLUXFQx5UjoXhRhKoKWaJXW2x8IFWJIEjGCgjMlqw5q8nJ3ErvRTAzjHjc_e6TYwSZkM8nJYlPXnaeFgXV2olvTjFM-T-GDkp_VeEQ_qMu5YmX-jnIy3LdGZ2j5HLB6gmcJ2h5F8ixzgodEGRnRC7OMNN4qs61j4"/>
+    <h1 class="font-headline-lg text-headline-lg text-on-surface mt-2">Acesso ao SIGEPI</h1>
+    <p class="font-body-sm text-body-sm text-on-surface-variant">Gestão de Equipamentos de Proteção Individual • NR-06</p>
+  </div>
+
+  <form id="loginForm" class="flex flex-col gap-space-md" onsubmit="event.preventDefault(); window.sigepiApp.handleLogin();">
+    <div class="flex flex-col gap-space-xxs">
+      <label class="font-label-md text-label-md text-on-surface">E-mail Corporativo</label>
+      <div class="relative">
+        <span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-lg">mail</span>
+        <input id="loginEmail" type="email" required value="carlos.eduardo@empresa.com" class="w-full h-10 pl-10 pr-space-md bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container transition-all"/>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-space-xxs">
+      <label class="font-label-md text-label-md text-on-surface">Senha</label>
+      <div class="relative">
+        <span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-lg">lock</span>
+        <input id="loginPassword" type="password" required value="12345678" class="w-full h-10 pl-10 pr-space-md bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-primary-container transition-all"/>
+      </div>
+    </div>
+
+    <button type="submit" class="w-full h-11 bg-primary text-on-primary font-headline-sm text-headline-sm rounded-lg shadow-sm hover:brightness-95 transition-all flex items-center justify-center gap-space-xs mt-2">
+      <span class="material-symbols-outlined text-lg">login</span>
+      <span>Entrar no Sistema</span>
+    </button>
+  </form>
+</div>

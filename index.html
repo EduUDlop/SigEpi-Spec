@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SIGEPI — Sistema de Gestão de Equipamentos de Proteção Individual</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@600&family=Open+Sans:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+  <!-- Toastify CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"/>
+
+  <style>
+    @layer base {
+      html, body { margin:0; padding:0; }
+      body { overscroll-behavior:none; }
+      main>:first-child { margin-top:0!important; }
+      main>:last-child { margin-bottom:0!important; }
+    }
+    ::-webkit-scrollbar { display:none; }
+  </style>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary-fixed": "#bfe9ff",
+            "on-secondary-fixed-variant": "#00531b",
+            "primary-container": "#5dc2ed",
+            "surface-container-high": "#dce9ff",
+            "on-error": "#ffffff",
+            "on-tertiary-fixed": "#001c3a",
+            "secondary": "#006e26",
+            "secondary-container": "#3efc6e",
+            "on-tertiary-fixed-variant": "#234876",
+            "on-background": "#0b1c30",
+            "inverse-on-surface": "#eaf1ff",
+            "surface-container-lowest": "#ffffff",
+            "surface-tint": "#006685",
+            "surface-variant": "#d3e4fe",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed": "#d4e3ff",
+            "tertiary-fixed-dim": "#a6c8fe",
+            "secondary-fixed": "#6bff83",
+            "on-primary-fixed": "#001f2a",
+            "on-error-container": "#93000a",
+            "on-primary": "#ffffff",
+            "primary-fixed-dim": "#6fd2fe",
+            "inverse-primary": "#6fd2fe",
+            "surface-container-highest": "#d3e4fe",
+            "on-tertiary-container": "#244877",
+            "tertiary": "#3d608f",
+            "on-secondary-container": "#007128",
+            "surface-container": "#e5eeff",
+            "surface-dim": "#cbdbf5",
+            "surface-bright": "#f8f9ff",
+            "inverse-surface": "#213145",
+            "surface": "#f8f9ff",
+            "on-secondary-fixed": "#002106",
+            "on-primary-container": "#004e66",
+            "tertiary-container": "#96b8ed",
+            "error": "#ba1a1a",
+            "on-surface-variant": "#3e484e",
+            "on-surface": "#0b1c30",
+            "background": "#f8f9ff",
+            "primary": "#006685",
+            "on-secondary": "#ffffff",
+            "on-primary-fixed-variant": "#004d65",
+            "outline-variant": "#bec8cf",
+            "outline": "#6e797f",
+            "surface-container-low": "#eff4ff",
+            "error-container": "#ffdad6",
+            "secondary-fixed-dim": "#08e55a"
+          },
+          borderRadius: {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          spacing: {
+            "space-xs": "0.5rem",
+            "space-2xl": "3rem",
+            "container-padding-mobile": "1rem",
+            "space-md": "1rem",
+            "space-sm": "0.75rem",
+            "gutter": "1rem",
+            "space-xxs": "0.25rem",
+            "space-xl": "2rem",
+            "space-lg": "1.5rem",
+            "container-padding-desktop": "2rem"
+          },
+          fontFamily: {
+            "headline-xl": ["Poppins"],
+            "body-sm": ["Open Sans"],
+            "headline-md": ["Poppins"],
+            "headline-xl-mobile": ["Poppins"],
+            "headline-lg": ["Poppins"],
+            "label-sm": ["Open Sans"],
+            "body-lg": ["Open Sans"],
+            "body-md": ["Open Sans"],
+            "headline-lg-mobile": ["Poppins"],
+            "label-numeric": ["Archivo Narrow"],
+            "label-md": ["Open Sans"],
+            "headline-sm": ["Poppins"],
+            "label-code": ["Archivo Narrow"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Toastify JS -->
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+
+  <!-- JS App & Stores -->
+  <script type="module" src="./supabase-client.js"></script>
+  <script type="module" src="./stores/auth.store.js"></script>
+  <script type="module" src="./stores/app.store.js"></script>
+  <script type="module" src="./stores/notificacao.store.js"></script>
+  <script type="module" src="./services/auth.service.js"></script>
+  <script type="module" src="./services/epi.service.js"></script>
+  <script type="module" src="./services/emprestimo.service.js"></script>
+  <script type="module" src="./services/alerta.service.js"></script>
+  <script type="module" src="./services/dashboard.service.js"></script>
+  <script type="module" src="./realtime.service.js"></script>
+  <script type="module" src="./app.js"></script>
+
+  <!-- Alpine.js -->
+  <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased" x-data="$store.app">
+
+  <!-- LOGIN VIEW -->
+  <template x-if="$store.app.currentView === 'login'">
+    <div id="view-login" class="min-h-screen flex items-center justify-center bg-surface p-space-md">
+      <!-- Login Form Content Loaded Dynamically -->
+    </div>
+  </template>
+
+  <!-- MAIN SPA LAYOUT -->
+  <template x-if="$store.app.currentView !== 'login'">
+    <div>
+      <!-- SIDEBAR -->
+      <aside class="fixed left-0 top-0 h-screen w-72 bg-surface-container-lowest z-50 flex flex-col justify-between shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+        <div class="flex flex-col">
+          <div class="h-16 px-space-md flex items-center justify-between">
+            <div class="flex items-center gap-space-xs">
+              <img alt="SIGEPI Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1XrmsaByBx-z6VBN4Ij_-5bddlsSj36_zn37k5d25sQ6mKq1j2McOI9FBkoiqulPrIq2yXbaQiw27Y_Bo_EOo2x8AEvLUXFQx5UjoXhRhKoKWaJXW2x8IFWJIEjGCgjMlqw5q8nJ3ErvRTAzjHjc_e6TYwSZkM8nJYlPXnaeFgXV2olvTjFM-T-GDkp_VeEQ_qMu5YmX-jnIy3LdGZ2j5HLB6gmcJ2h5F8ixzgodEGRnRC7OMNN4qs61j4"/>
+              <div class="flex flex-col">
+                <span class="font-headline-sm text-headline-sm text-on-surface tracking-tight leading-none">SIGEPI</span>
+                <span class="font-label-sm text-label-sm text-outline leading-tight">NR-06 Compliance</span>
+              </div>
+            </div>
+            <span class="font-label-code text-label-code bg-surface-container-low text-primary px-space-xs py-space-xxs rounded">v2.4</span>
+          </div>
+
+          <div class="mx-space-md my-space-xs p-space-xs bg-surface-container-low rounded-lg flex items-center justify-between">
+            <div class="flex items-center gap-space-xs">
+              <span class="material-symbols-outlined text-secondary text-sm">sync</span>
+              <div class="flex flex-col">
+                <span class="font-label-sm text-label-sm text-on-surface">MTE Base CA</span>
+                <span class="font-label-code text-label-code text-secondary">Sincronizado</span>
+              </div>
+            </div>
+            <span class="h-2 w-2 rounded-full bg-secondary-container animate-pulse"></span>
+          </div>
+
+          <nav class="flex flex-col gap-space-xxs px-space-sm pt-space-xs">
+            <a href="#" @click.prevent="$store.app.navigate('dashboard')"
+               :class="$store.app.currentView === 'dashboard' ? 'bg-primary-container text-on-primary-container font-semibold' : 'text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface'"
+               class="flex items-center gap-space-sm px-space-md py-space-xs font-label-md text-label-md rounded-lg transition-all">
+              <span class="material-symbols-outlined text-xl">dashboard</span>Dashboard
+            </a>
+            <a href="#" @click.prevent="$store.app.navigate('solicitacoes')"
+               :class="$store.app.currentView === 'solicitacoes' ? 'bg-primary-container text-on-primary-container font-semibold' : 'text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface'"
+               class="flex items-center gap-space-sm px-space-md py-space-xs font-label-md text-label-md rounded-lg transition-all">
+              <span class="material-symbols-outlined text-xl">assignment</span>Solicitações
+            </a>
+            <a href="#" @click.prevent="$store.app.navigate('liberacoes-scanner')"
+               :class="$store.app.currentView === 'liberacoes-scanner' ? 'bg-primary-container text-on-primary-container font-semibold' : 'text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface'"
+               class="flex items-center gap-space-sm px-space-md py-space-xs font-label-md text-label-md rounded-lg transition-all">
+              <span class="material-symbols-outlined text-xl">qr_code_scanner</span>Liberações / Scanner
+            </a>
+            <a href="#" @click.prevent="$store.app.navigate('catalogo-estoque')"
+               :class="$store.app.currentView === 'catalogo-estoque' ? 'bg-primary-container text-on-primary-container font-semibold' : 'text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface'"
+               class="flex items-center gap-space-sm px-space-md py-space-xs font-label-md text-label-md rounded-lg transition-all">
+              <span class="material-symbols-outlined text-xl">inventory_2</span>Catálogo &amp; Estoque
+            </a>
+            <a href="#" @click.prevent="$store.app.navigate('relatorios')"
+               :class="$store.app.currentView === 'relatorios' ? 'bg-primary-container text-on-primary-container font-semibold' : 'text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface'"
+               class="flex items-center gap-space-sm px-space-md py-space-xs font-label-md text-label-md rounded-lg transition-all">
+              <span class="material-symbols-outlined text-xl">verified_user</span>Relatórios NR-06
+            </a>
+          </nav>
+        </div>
+
+        <div class="p-space-md">
+          <div class="p-space-sm bg-surface-container rounded-xl flex items-center justify-between">
+            <div class="flex items-center gap-space-xs">
+              <span class="material-symbols-outlined text-primary text-lg">database</span>
+              <div class="flex flex-col">
+                <span class="font-label-sm text-label-sm text-on-surface">Supabase Live</span>
+                <span class="font-label-code text-label-code text-on-surface-variant">cluster-br-01</span>
+              </div>
+            </div>
+            <span class="h-2 w-2 rounded-full bg-secondary"></span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- HEADER & MAIN CONTENT WRAPPER -->
+      <div class="pl-72 flex flex-col min-h-screen">
+        <!-- HEADER -->
+        <header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between">
+          <div class="flex items-center gap-space-lg flex-1 max-w-xl">
+            <div class="relative w-full max-w-md">
+              <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg pointer-events-none">search</span>
+              <input class="w-full h-10 pl-10 pr-space-md bg-surface-container-low rounded-lg font-body-sm text-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary-container transition-all"
+                     placeholder="Buscar por Matrícula, CA ou Colaborador..." type="text"/>
+            </div>
+            <div class="hidden xl:flex items-center gap-space-xs px-space-sm py-space-xxs bg-surface-container-low rounded-lg">
+              <span class="material-symbols-outlined text-primary text-base">schedule</span>
+              <span class="font-label-sm text-label-sm text-on-surface-variant">Turno Almoxarifado:</span>
+              <span class="font-label-code text-label-code text-primary">07:00 - 16:00 (A)</span>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-space-md">
+            <div class="hidden md:flex items-center gap-space-xs px-space-sm py-space-xxs bg-surface-container-low rounded-lg">
+              <span class="material-symbols-outlined text-secondary text-base">cloud_done</span>
+              <span class="font-label-code text-label-code text-on-surface-variant">ONLINE</span>
+            </div>
+
+            <button class="relative p-space-xs text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high rounded-full transition-colors" type="button">
+              <span class="material-symbols-outlined text-xl">notifications</span>
+              <span x-show="$store.notificacao?.count > 0" class="absolute top-1 right-1 h-2.5 w-2.5 rounded-full bg-error ring-2 ring-surface-container-lowest"></span>
+            </button>
+
+            <div class="h-6 w-px bg-surface-container-high"></div>
+
+            <div class="flex items-center gap-space-sm cursor-pointer" @click="$store.auth.logout()">
+              <div class="flex flex-col text-right hidden sm:flex">
+                <span class="font-label-md text-label-md text-on-surface leading-tight" x-text="$store.auth.user?.nome || 'Carlos Eduardo'">Carlos Eduardo</span>
+                <span class="font-label-sm text-label-sm text-on-surface-variant leading-none" x-text="$store.auth.user?.funcao || 'Gestor de SST / Almoxarife'">Gestor de SST / Almoxarife</span>
+              </div>
+              <img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-primary-container" src="https://lh3.googleusercontent.com/aida/AEtjO1WmTHI-cQ7_spxl5ha-kFknGU3v9tssZg5ynVTy_NmQTzyjN8H7fjt-sErUFplGKTwBxWumqPRh1fYv9WzFs9y4qkUBJrAEgVajC8BjVMX8l8KMS8doGQbOegWwceE5jOqzEEg1PDfGGYkcYXC6Tc1WiyAeHGw_MerMIJdaUF5oa11npnwna1VnKv5A4K2SY86G0p-hh6Sx6EOolXpFu_rPIT79evQEtb3TFQFw0qznMBdS7Vkts9--1iE"/>
+            </div>
+          </div>
+        </header>
+
+        <!-- DYNAMIC MAIN CONTAINER -->
+        <main id="main-content" class="w-full pt-16 bg-surface flex-1 px-space-lg py-space-lg">
+          <!-- Views rendered here -->
+        </main>
+      </div>
+    </div>
+  </template>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!-- pages/catalogo-estoque.html -->
+<div class="flex flex-col w-full gap-space-md">
+  <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+    <div class="flex flex-col gap-space-xxs min-w-0">
+      <div class="flex items-center gap-space-xs">
+        <span class="font-label-code text-label-code uppercase tracking-wider text-primary bg-primary-fixed/40 px-space-xs py-0.5 rounded">Módulo Almoxarifado</span>
+        <span class="text-outline-variant font-label-code text-label-code">•</span>
+        <span class="flex items-center gap-1 font-label-code text-label-code text-secondary font-semibold">
+          <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Sincronizado MTE
+        </span>
+      </div>
+      <h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Catálogo &amp; Estoque de EPIs</h1>
+      <p class="font-body-sm text-body-sm text-on-surface-variant">148 equipamentos cadastrados • Base sincronizada com Ministério do Trabalho (MTE)</p>
+    </div>
+    <div class="flex items-center gap-space-xs flex-wrap">
+      <button class="flex items-center gap-space-xs px-space-sm py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-all" type="button" @click="$store.notificacao.showToast('Inventário exportado com sucesso!', 'success')">
+        <span class="material-symbols-outlined text-[18px]">download</span>
+        <span>Exportar Inventário</span>
+      </button>
+      <button class="flex items-center gap-space-xs px-space-md py-2 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm hover:brightness-95 transition-all" type="button" @click="$store.notificacao.showToast('Formulário de novo EPI aberto', 'info')">
+        <span class="material-symbols-outlined text-[18px]">add</span>
+        <span>+ Cadastrar EPI</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- FILTROS -->
+  <div class="flex flex-col gap-space-sm bg-surface-container-lowest p-space-md rounded-xl shadow-sm">
+    <div class="flex flex-col lg:flex-row lg:items-center gap-space-sm justify-between">
+      <div class="relative flex-1">
+        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span>
+        <input class="w-full pl-10 pr-space-md py-2 rounded-lg bg-surface-container-low text-on-surface placeholder:text-outline font-body-sm text-body-sm focus:outline-none focus:bg-surface-container transition-colors"
+               placeholder="Buscar por nome, modelo, fabricante ou número de CA..." type="text"/>
+      </div>
+    </div>
+  </div>
+
+  <!-- MASTER DETAIL LAYOUT -->
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-md items-start">
+    <!-- TABELA -->
+    <div class="lg:col-span-7 flex flex-col gap-space-xs bg-surface-container-lowest rounded-xl shadow-sm p-space-md">
+      <div class="flex items-center justify-between pb-space-xs">
+        <span class="font-headline-sm text-headline-sm text-on-surface">Equipamentos Cadastrados</span>
+        <span class="font-label-code text-label-code text-on-surface-variant uppercase">NR-06 Audit Checklist</span>
+      </div>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left">
+          <thead>
+            <tr class="text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider bg-surface-container-low rounded-lg">
+              <th class="py-2.5 px-3 rounded-l-lg">Equipamento &amp; Fabricante</th>
+              <th class="py-2.5 px-3">CA (MTE)</th>
+              <th class="py-2.5 px-3 text-right">Saldo</th>
+              <th class="py-2.5 px-3 text-center rounded-r-lg">Setor</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="epi-row cursor-pointer transition-all duration-150 bg-primary-container/20 rounded-lg">
+              <td class="py-2.5 px-3 rounded-l-lg">
+                <div class="flex items-center gap-space-xs">
+                  <div class="w-7 h-7 rounded bg-primary-fixed-dim/30 flex items-center justify-center text-primary shrink-0">
+                    <span class="material-symbols-outlined text-[16px]">hardware</span>
+                  </div>
+                  <div class="flex flex-col min-w-0">
+                    <span class="font-label-md text-label-md text-on-surface font-semibold truncate">Capacete V-Gard 500 c/ Jugular</span>
+                    <span class="font-label-sm text-label-sm text-on-surface-variant">MSA • Mod. Aba Frontal</span>
+                  </div>
+                </div>
+              </td>
+              <td class="py-2.5 px-3">
+                <div class="flex flex-col">
+                  <span class="font-label-numeric text-label-numeric text-on-surface">CA 31.428</span>
+                  <span class="inline-flex items-center gap-1 font-label-code text-label-code text-secondary">
+                    <span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Ativo
+                  </span>
+                </div>
+              </td>
+              <td class="py-2.5 px-3 text-right">
+                <span class="font-label-numeric text-label-numeric text-on-surface font-bold">24 un.</span>
+              </td>
+              <td class="py-2.5 px-3 text-center rounded-r-lg">
+                <span class="font-label-code text-label-code px-2 py-0.5 rounded bg-surface-container text-on-surface font-medium">A-02</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- FICHA TECNICA CARD -->
+    <div class="lg:col-span-5 flex flex-col gap-space-md bg-surface-container-lowest rounded-xl shadow-sm p-space-md sticky top-20">
+      <div class="flex items-start gap-space-md">
+        <div class="relative w-24 h-24 rounded-lg overflow-hidden bg-surface-container-low shrink-0 shadow-sm flex items-center justify-center">
+          <span class="material-symbols-outlined text-[48px] text-primary">security</span>
+        </div>
+        <div class="flex flex-col min-w-0 flex-1">
+          <span class="font-label-code text-label-code uppercase tracking-wider text-primary">MSA do Brasil</span>
+          <h2 class="font-headline-sm text-headline-sm text-on-surface truncate">Capacete V-Gard 500 c/ Jugular</h2>
+          <span class="font-body-sm text-body-sm text-on-surface-variant">Proteção craniana contra impactos e choques elétricos até 20.000V</span>
+          <div class="mt-2 flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-secondary"></span>
+            <span class="font-label-code text-label-code text-secondary font-semibold">CA 31.428 • Aprovado MTE</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-surface-container-low p-space-sm rounded-lg flex flex-col gap-space-xxs">
+        <div class="flex items-center justify-between">
+          <span class="font-label-sm text-label-sm text-on-surface-variant">Validade do CA (MTE):</span>
+          <span class="font-label-numeric text-label-numeric text-secondary font-bold">18/11/2028 (812 dias)</span>
+        </div>
+        <div class="flex items-center justify-between">
+          <span class="font-label-sm text-label-sm text-on-surface-variant">Norma Técnica Base:</span>
+          <span class="font-label-code text-label-code text-on-surface">ABNT NBR 8221:2019</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-space-xs text-center">
+        <div class="p-space-xs rounded-lg bg-surface-container-high/60 flex flex-col">
+          <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Estoque</span>
+          <span class="font-headline-md text-headline-md text-primary font-bold">24</span>
+          <span class="font-label-code text-label-code text-on-surface-variant">Unidades</span>
+        </div>
+        <div class="p-space-xs rounded-lg bg-surface-container-high/60 flex flex-col">
+          <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Em Uso</span>
+          <span class="font-headline-md text-headline-md text-tertiary font-bold">58</span>
+          <span class="font-label-code text-label-code text-on-surface-variant">Colaboradores</span>
+        </div>
+        <div class="p-space-xs rounded-lg bg-surface-container-high/60 flex flex-col">
+          <span class="font-label-sm text-label-sm text-on-surface-variant uppercase">Mínimo</span>
+          <span class="font-headline-md text-headline-md text-on-surface font-bold">10</span>
+          <span class="font-label-code text-label-code text-on-surface-variant">Ponto Pedido</span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs pt-space-xxs">
+        <button class="flex items-center justify-center gap-space-xs px-space-sm py-2.5 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-all" type="button" @click="$store.notificacao.showToast('Etiqueta térmica enviada para a impressora', 'success')">
+          <span class="material-symbols-outlined text-[18px]">print</span>
+          <span>Etiqueta Térmica</span>
+        </button>
+        <button class="flex items-center justify-center gap-space-xs px-space-sm py-2.5 rounded-lg bg-secondary-container text-on-secondary-container font-label-md text-label-md shadow-sm hover:brightness-95 transition-all" type="button" @click="$store.notificacao.showToast('Ação de entrada/baixa registrada', 'info')">
+          <span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+          <span>Entrada / Baixa</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
